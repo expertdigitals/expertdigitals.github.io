@@ -198,7 +198,14 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formsubmit.co/expertdigitalsgr@gmail.com" method="post" role="form" class="php-email-form">
+              <!-- Honeypot -->
+							<input type="text" name="_honey" style="display: none;">
+							<!-- Disable reCAPTCHA -->
+							<input type="hidden" name="_captcha" value="false">
+							<!-- Thank You Page -->
+							<input type="hidden" name="_next" value="https://expertdigitals.github.io/thank-you.html">
+							<!-- Email Template -->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Το όνομα σας" required>
