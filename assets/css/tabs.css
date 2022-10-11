@@ -1,103 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
-@import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
-
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background: #eee;
-}
-
-#tsum-tabs h1 {
-  padding: 50px 0;
-  font-weight: 400;
-  text-align: center;
-}
-
-#tsum-tabs p {
-  margin: 0 0 20px;
-  line-height: 1.5;
-}
-
-#tsum-tabs main {
-  min-width: 320px;
-  max-width: 800px;
-  padding: 50px;
-  margin: 0 auto;
-  background: #fff;
-}
-
-#tsum-tabs section {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
-}
-
-#tsum-tabs input {
+.tabset .tab-panel {
   display: none;
 }
 
-#tsum-tabs label {
-  display: inline-block;
-  margin: 0 0 -1px;
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-}
-
-#tsum-tabs label:before {
-  font-family: fontawesome;
-  font-weight: normal;
-  margin-right: 10px;
-}
-
-#tsum-tabs label[for*='1']:before { content: '\f1cb'; }
-#tsum-tabs label[for*='2']:before { content: '\f17d'; }
-#tsum-tabs label[for*='3']:before { content: '\f16b'; }
-#tsum-tabs label[for*='4']:before { content: '\f1a9'; }
-
-#tsum-tabs label:hover {
-  color: #888;
-  cursor: pointer;
-}
-
-#tsum-tabs input:checked + label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid #8000E6;
-  border-bottom: 1px solid #fff;
-}
-
-#tsum-tabs #tab1:checked ~ #content1,
-#tsum-tabs #tab2:checked ~ #content2,
-#tsum-tabs #tab3:checked ~ #content3,
-#tsum-tabs #tab4:checked ~ #content4 {
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
   display: block;
 }
 
-@media screen and (max-width: 650px) {
-  #tsum-tabs label {
-    font-size: 0;
-  }
-  #tsum-tabs label:before {
-    margin: 0;
-    font-size: 18px;
-  }
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
 }
 
-@media screen and (max-width: 400px) {
-  #tsum-tabs label {
-    padding: 15px;
-  }
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #8000E6;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #8000E6;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+.tabset {
+  max-width: 65em;
 }
