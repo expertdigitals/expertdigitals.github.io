@@ -17,7 +17,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dwnbtn:hover {
-	background: #fff;
+	background: transparent;
 	border-color: #8000E6;
 	color: #8000E6;
 }
