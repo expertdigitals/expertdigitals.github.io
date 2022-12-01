@@ -940,11 +940,13 @@ section {
   opacity: 1;
 }
 
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  background-color: #222222;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -971,6 +973,7 @@ section {
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(21, 21, 21, 0.08);
+  background-color: #313131;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -979,30 +982,82 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
+.portfolio .portfolio-info ul i {
+  position: absolute;
+  color: #8000E6;
+}
+
 .portfolio-details .portfolio-description {
-  padding-top: 30px;
+  padding-top: 5px;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-info a {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.portfolio-details .portfolio-info a i {
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 10px;
+  background: #8000E6;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.portfolio-details .portfolio-info .btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-info .btn:hover {
+  background: #8000E6;
+  border-color: #8000E6;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
