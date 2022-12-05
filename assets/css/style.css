@@ -993,6 +993,15 @@ section {
   color: #fff;
 }
 
+.portfolio-details .portfolio-info p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-info hr {
+  border-top: 1px solid #fff;
+}
+
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
@@ -1007,23 +1016,6 @@ section {
 .portfolio .portfolio-info ul i {
   position: absolute;
   color: #8000E6;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 5px;
-  color: #fff;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-  color: #fff;
 }
 
 .portfolio-details .portfolio-info a {
@@ -1059,6 +1051,29 @@ section {
   border-color: #8000E6;
   color: #fff;
 }
+
+.portfolio-details .portfolio-description {
+  padding-top: 5px;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+  color: #fff;
+}
+
+.portfolio-details .portfolio-description hr {
+  border-top: 1px solid #fff;
+}
+
+
 
 /*--------------------------------------------------------------
 # Counts
